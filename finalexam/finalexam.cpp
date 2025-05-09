@@ -18,7 +18,7 @@ read the contents of the file into an array then display the following data:
 
 using namespace std;
 
-vector<double> sortednums(string file)
+vector<double> sortednums(string file) // outputs a sorted list from the input file
 {
     ifstream infile(file);
 	if (!infile)
@@ -38,23 +38,23 @@ vector<double> sortednums(string file)
 
 }
 
-string getfilename()
+string getfilename() // gets the name of the file to open
 {
 	string fileName;
 	cout << "Enter the name of the file you want to open: ";
 	cin >> fileName;
 	return fileName;
 }
-void lownum(vector<double> nums)
+void lownum(vector<double> nums) // reads the first item in the vector. bc it is sorted allready it works
 {
 	cout << "The lowest number in the file is " << nums.front() << endl; // wanted to make it more efficent https://www.geeksforgeeks.org/how-to-access-first-element-of-vector-in-cpp/
 	
 }
-void highnum(vector<double> nums)
+void highnum(vector<double> nums) // reads the last item in the vector. bc it is sorted allready it works
 {
 	cout << "The highest number in the file is " << nums.back() << endl;
 }
-void totalnums(vector<double> nums)
+void totalnums(vector<double> nums) // calculates how many items are in the vector by counting the items in the vector
 {
 	int i = 0;
 	int c = 0;
@@ -65,7 +65,7 @@ void totalnums(vector<double> nums)
 	cout << "There are " << c << " numbers in the file." << endl;
 
 }
-void average(vector<double> nums)
+void average(vector<double> nums) // calulates the average
 {
 	double total, average,non;
 	total = 0;
@@ -78,7 +78,7 @@ void average(vector<double> nums)
 	average = total / non;
 	cout << "There average of all the numbers is " << average << endl;
 }
-int quits()
+int quits() // prompts if the user wants to quit
 {
 	int quit;
 	cout << "Type 1 to exit; 0 to cont. " << endl;
@@ -97,7 +97,7 @@ int quits()
 		return 1;
 		break;
 	}
-}
+} 
 
 int main()
 {
