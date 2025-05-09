@@ -103,7 +103,7 @@ int main()
 {
 	int quit = 0;
 	do {
-		const string filelocation = "C:/Users/perri/Downloads/";
+		const string filelocation = "C:/Users/perri/Downloads/"; //only need to change this to get it to run
 		string filename = filelocation + getfilename();
 		vector<double> nums = sortednums(filename);
 		cout << "charistaristics of file " << filename << endl;
